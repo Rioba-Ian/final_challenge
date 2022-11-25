@@ -223,3 +223,24 @@ img {
         display: none;
     }
 }
+
+
+/* media query desktop and large */
+
+@media (min-width: 1000px) {
+    .hero__content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+        /* margin-right: 1em; */
+        flex-shrink: 2;
+    }
+
+    .hero__content-cta {
+        flex-shrink: 3;
+    }
+}

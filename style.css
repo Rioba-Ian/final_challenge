@@ -136,7 +136,6 @@ img {
 .cards__main {
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 
 .card {
@@ -144,6 +143,7 @@ img {
     text-align: center;
 
     padding: 1em;
+    margin-top: 1em;
 }
 
 .card h2 {
@@ -169,7 +169,7 @@ img {
 /* start of footer */
 .footer {
     background-color: #2e323f;
-    padding: 1em;
+    padding: 2em;
 }
 
 .footer-title {
@@ -227,6 +227,29 @@ img {
 
 /* media query desktop and large */
 
+@media (min-width: 700px) and (max-width:1000px) {
+    .cards__main-section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .cards__main-section .card+.card {
+        margin-top: 0;
+        margin-left: 1em;
+    }
+
+    /* just left this here because that !st card could
+    be aligned in a better way than it looks between 700px 
+    and 1000px
+    */
+
+    .card:nth-child(1) {
+
+        /* align-self: flex-start; */
+    }
+}
+
 @media (min-width: 1000px) {
     .hero__content {
         display: flex;
@@ -242,5 +265,50 @@ img {
 
     .hero__content-cta {
         flex-shrink: 3;
+    }
+
+    /* cards main */
+    .cards__section-cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cards__section-cards .card-content+.card-content {
+        margin-left: 1em;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+
+    /* end of cards */
+
+    .main__sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main__section-content {
+        flex-shrink: 2;
+    }
+
+    .cards__main-section {
+        flex-shrink: 2;
+        margin-left: 15%;
+    }
+
+
+    /* footer */
+    .footer-content {
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about {
+        width: 40%;
     }
 }

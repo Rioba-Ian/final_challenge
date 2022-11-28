@@ -30,6 +30,8 @@ a {
 .container {
     width: min(80%, 1280px);
     margin: 0 auto;
+
+    position: relative;
 }
 
 img {
@@ -48,14 +50,23 @@ img {
     font-weight: 700;
 }
 
-/* start of header */
-.navbar {
-    background-color: #2e323f;
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    border: 2px red solid;
+}
+
+/* start of header */
+header {
+    background-color: #2e323f;
+    padding: 2em 0;
+}
+
+.navbar {
     font-size: 1.125rem;
     font-family: 'Oswald Bold', serif;
-
-    padding: 1em 0;
 }
 
 .hero {
@@ -91,6 +102,69 @@ img {
     margin-bottom: 1em;
 }
 
+
+/* nav toggle */
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background-color: #3b4050;
+    color: #fff;
+    transition: opacity 250ms ease;
+
+    position: absolute;
+    right: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .7;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background-color: #fff;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+
+
+
+/* end of nav toggle  */
+
+/* nav visible */
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
 
 
 /* end of hero */
@@ -310,5 +384,14 @@ img {
 
     .about {
         width: 40%;
+    }
+}
+
+
+/* mobile section navbar */
+
+@media (min-width:700px) {
+    .nav-toggle {
+        display: none;
     }
 }

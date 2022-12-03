@@ -9,3 +9,5 @@ Let me requote one of his favorite words:
 
 "The web is responsive by default, it is us who make it unresponsive"...
 
+
+

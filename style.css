@@ -42,6 +42,7 @@ img {
 .cta {
     padding: .5em 1em;
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    cursor: pointer;
 
     text-transform: uppercase;
     background-color: #a59678;
@@ -58,6 +59,13 @@ img {
 
     padding: .25em .75em;
     border-radius: 20px;
+}
+
+.cta:hover,
+.cta:active,
+.signup:hover,
+.signup:active {
+    opacity: .7;
 }
 
 /* start of header */
@@ -443,4 +451,16 @@ header {
     .nav-list .nav-item+.nav-item {
         margin-left: 3em;
     }
+}
+
+
+/* my info */
+
+.my-info {
+    font-size: 0.9rem;
+    margin-top: 1em;
+    text-align: center;
+
+    color: #b9b6b0;
+    font-family: 'Mono Space', sans-serif;
 }
